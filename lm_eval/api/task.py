@@ -988,6 +988,9 @@ class ConfigurableTask(Task):
                 **(self.config.metadata or {}), **(self.config.dataset_kwargs or {})
             )
         else:
+            # self.DATASET_NAME = None
+            print('log> data path: ', self.DATASET_PATH)
+            print('log> data name: ', self.DATASET_NAME)
             self.dataset = datasets.load_dataset(
                 path=self.DATASET_PATH,
                 name=self.DATASET_NAME,
