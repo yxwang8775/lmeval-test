@@ -1,0 +1,17 @@
+task: race_middle
+dataset_path: ehovy/race
+dataset_name: middle
+output_type: multiple_choice
+test_split: test
+process_docs: !function preprocess_race_middle.process_docs
+doc_to_text: !function preprocess_race_middle.doc_to_text
+doc_to_target: !function preprocess_race_middle.doc_to_target
+doc_to_choice: !function preprocess_race_middle.doc_to_choice
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 2.0
+dataset_kwargs:
+  trust_remote_code: true
