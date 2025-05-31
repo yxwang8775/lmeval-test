@@ -18,7 +18,10 @@ filter_list:
 generation_kwargs:
   until:
     - "Question:"
-  max_gen_toks: 4096
+    - "</s>"
+    - "Q"
+    - "\n\n"
+  max_gen_toks: 50
   do_sample: false
   temperature: 0.0
 num_fewshot: 5
