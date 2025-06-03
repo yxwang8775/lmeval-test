@@ -223,6 +223,9 @@ def exact_match_hf_evaluate(
         repl_table = string.digits.maketrans("", "", string.digits)
         predictions = np.char.translate(predictions, table=repl_table)
         references = np.char.translate(references, table=repl_table)
+        
+    # Remove leading and trailing whitespace
+    predictions = np.char.strip(predictions)
 
     score_list = predictions == references
 
