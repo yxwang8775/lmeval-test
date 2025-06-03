@@ -21,7 +21,7 @@ generation_kwargs:
     - "</s>"
     - "Q"
     - "\n\n"
-  max_gen_toks: 50
+  max_gen_toks: 768
   do_sample: false
   temperature: 0.0
 num_fewshot: 5
