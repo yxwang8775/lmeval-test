@@ -9,18 +9,19 @@ metric_list:
     # ignore_case: true
     # ignore_punctuation: true
 generation_kwargs:
-  max_gen_toks: 1024
+  max_gen_toks: 1280
   until:
     - "</s>"
     - "Q"
-    - "\n\n"
+    # - "\n\n"
   do_sample: false
   temperature: 0.0
 filter_list:
   - name: "get-answer"
     filter:
       - function: "regex"
-        regex_pattern: "(?<=the answer is )(.*)(?=.)"
+        # regex_pattern: "(?<=the answer is )(.*)(?=.)"
+        regex_pattern: "(?i)the answer is ([^\\n\\.]*)"
       - function: "take_first"
 num_fewshot: 3
 metadata:
