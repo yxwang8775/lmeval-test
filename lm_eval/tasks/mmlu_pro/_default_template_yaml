@@ -19,8 +19,8 @@ generation_kwargs:
   until:
     - "Question:"
     - "</s>"
-    - "Q"
-    - "\n\n"
+    - "<|endoftext|>"
+    # - "\n\n"
   max_gen_toks: 768
   do_sample: false
   temperature: 0.0
