@@ -13,6 +13,7 @@ generation_kwargs:
   until:
     - "</s>"
     - "Q"
+    - "<|endoftext|>"
     # - "\n\n"
   do_sample: false
   temperature: 0.0
