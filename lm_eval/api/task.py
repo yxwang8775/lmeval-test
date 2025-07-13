@@ -991,6 +991,7 @@ class ConfigurableTask(Task):
             # self.DATASET_NAME = None
             print('log> data path: ', self.DATASET_PATH)
             print('log> data name: ', self.DATASET_NAME)
+            print('log> data config: ', self.dataset_kwargs)
             self.dataset = datasets.load_dataset(
                 path=self.DATASET_PATH,
                 name=self.DATASET_NAME,
